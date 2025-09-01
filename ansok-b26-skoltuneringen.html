@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B26 School Tournament</title>
+  <style>
+    /* Horizon font (lägg horizon.otf i samma mapp som HTML-filen) */
+    @font-face {
+      font-family: 'Horizon';
+      src: url('horizon.otf') format('opentype');
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Horizon', Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: center; /* centrerar innehållet horisontellt */
+      align-items: center;     /* centrerar innehållet vertikalt */
+      background-color: #000;
+      padding: 90px;
+    }
+
+    .navbar img {
+      height: 120px;
+      margin-right: 20px;
+    }
+
+    .navbar h1 {
+      color: #ffffff;
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    /* Container */
+    .container {
+      max-width: 600px;
+      margin: 0px auto;
+      padding: 10px;
+      background-color: #000;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      flex-grow: 1;
+      font-family: Arial, sans-serif; /* formulärtext */
+    }
+
+    h2 {
+      color: #ffbf00;
+      text-align: center;
+      font-family: 'Horizon', Arial, sans-serif;
+      font-size: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+      color: #ffbf00;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background-color: #ffbf00;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #e6ac00;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ffbf00;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      gap: 30px;
+    }
+
+    footer img {
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <img src="logo-b26-skoltuneringen.png" alt="B26 Logo">
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <h2>Anmäl en skola till turneringen</h2>
+    <p style="text-align: center; font-size: 20px;">Regler och krav samt ytterligare information för att kunna delta i turneringen hittar du <a href="#" style="color: #ffbf00;">här</a></p>
+
+    <form action="send-b26-skoltuneringen.php" method="POST">
+      <label for="school">Namn på skolan:</label>
+      <input type="text" id="school" name="school" required>
+
+      <label for="city">Ort:</label>
+      <input type="text" id="city" name="city" required>
+
+      <label for="email">E-post vi ska kontakta:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Egna frågor, krav eller funderingar:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <p style="text-align: center; font-size: 20px;">Vi kommer att höra av oss via e-post för att diskutera vidare <a href="mailto:erikroininen@dizzitgames.com" style="color: #ffbf00;">erikroininen@dizzitgames.com</a></p>
+
+      <input type="submit" value="Skicka anmälan">
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <img src="logo-b26-skoltuneringen-foot.png" alt="Footer Logo 1">
+    <img src="logo-dizzitgames-foot.png" alt="Footer Logo 2">
+  </footer>
+
+</body>
+</html>
