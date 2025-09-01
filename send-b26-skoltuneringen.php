@@ -1,5 +1,8 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" || $_SERVER["REQUEST_METHOD"] == "GET") {
+    // Hantera formulär (endast för test!)
+}
+
     // --- Hämta formulärdata ---
     $school = htmlspecialchars($_POST['school']);
     $city = htmlspecialchars($_POST['city']);
@@ -56,3 +59,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p style='color:red; text-align:center;'>Formuläret skickades inte korrekt.</p>";
 }
 ?>
+
